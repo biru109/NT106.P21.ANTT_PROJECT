@@ -1,25 +1,198 @@
-<div align="center">
+# 🎮 UNO LAN MULTIPLAYER 🎮
+### Real-Time Client–Server Card Game using TCP/IP Sockets
 
-# 🃏 [NT106.P21.ANTT] PROJECT UNO GAME 🃏
+Course Project for **NT106 - Application Programming over Networks (UIT)** focusing on building a real-time multiplayer UNO card game over LAN using C# TCP/IP Sockets.
 
-</div>
+A desktop multiplayer implementation of the classic **UNO Card Game** built with **C#**, **Windows Forms**, and **TCP/IP Socket Programming**.
 
-## 📌 Giới thiệu
-UNO Game là một trò chơi được lập trình trên nền tảng Windows, hỗ trợ 2–4 người chơi qua mạng LAN. Đồ án sử dụng C# và giao tiếp mạng bằng TCP/IP Socket, giúp tạo trải nghiệm chơi mượt mà và trực quan.
+The project adopts a **multi-threaded Client–Server Architecture**, enabling **2–4 players** to compete over a Local Area Network (LAN) while ensuring **real-time communication**, **server-authoritative game synchronization**, and **strict rule validation**.
 
-🎮 **Tính năng chính** <br>
-- Tạo & tham gia phòng (Host/Client) qua mạng LAN <br>
-- Tuân theo luật chơi UNO chuẩn, hỗ trợ đánh bài, đổi màu, đổi lượt, rút bài,... <br>
-- Tự động kiểm tra luật chơi, cảnh báo lỗi khi đánh bài sai <br>
-- Kết thúc ván khi có người thắng, xem xếp hạng và tạo ván mới <br>
+---
 
+# Features
 
+- Real-time multiplayer UNO gameplay
+- TCP/IP Socket communication
+- Windows Forms desktop application
+- Dynamic lobby (2–4 players)
+- Multi-threaded server architecture
+- Complete UNO game mechanics
+- Real-time game state synchronization
+- Server-side rule validation
+- Automatic packet broadcasting
 
-## 👨‍👩‍👧‍👦 Danh sách thành viên
+---
 
-| STT | Họ tên                 | MSSV     |
-|:---:|:----------------------:|:--------:|
-| 1   | Nguyễn Thị Huỳnh Như   | 23521126 |
-| 2   | Hồng Bích Như          | 23521120 |
+# System Architecture
 
+```text
+                           +-------------------------------+
+                           |      UNO Client (Player 1)    |
+                           +-------------------------------+
+                                      │
+                           +-------------------------------+
+                           |      UNO Client (Player 2)    |
+                           +-------------------------------+
+                                      │
+                           +-------------------------------+
+                           |      UNO Client (Player 3)    |
+                           +-------------------------------+
+                                      │
+                           +-------------------------------+
+                           |      UNO Client (Player 4)    |
+                           +-------------------------------+
+                                      │
+                              TCP/IP Socket Network
+                                      │
+                                      ▼
++-----------------------------------------------------------------------+
+|                     Multi-threaded UNO Server                          |
+|-----------------------------------------------------------------------|
+|  • TCP Socket Listener                                                 |
+|  • Lobby & Player Management                                           |
+|  • Game Engine                                                         |
+|  • Deck Shuffle                                                        |
+|  • Turn Controller                                                     |
+|  • Rule Validation                                                     |
+|  • Packet Dispatcher                                                   |
+|  • State Synchronization                                               |
+|  • Broadcast Manager                                                   |
++-----------------------------------------------------------------------+
+```
 
+---
+
+# 🎯 Gameplay Flow
+
+```text
+Client Connect
+      │
+      ▼
+Join Lobby
+      │
+      ▼
+Waiting for Players
+      │
+      ▼
+Start Match
+      │
+      ▼
+Shuffle Deck
+      │
+      ▼
+Distribute Cards
+      │
+      ▼
+Game Loop
+      │
+      ├── Receive Player Action
+      ├── Validate Move
+      ├── Update Game State
+      ├── Broadcast New State
+      └── Next Turn
+      │
+      ▼
+Winner Detected
+      │
+      ▼
+End Game
+```
+
+---
+
+# Supported UNO Rules
+
+The game implements the complete core UNO rule set, including:
+
+### Number Cards
+
+- 0–9
+- Four colors (Red, Yellow, Green, Blue)
+
+### Action Cards
+
+- Skip
+- Reverse
+- Draw Two
+- Wild
+- Wild Draw Four
+
+Additional mechanics include:
+
+- Turn rotation
+- Reverse direction
+- Forced card drawing
+- Wild color selection
+- Winner detection
+- Illegal move prevention
+
+---
+
+# Networking
+
+The networking layer is implemented using **System.Net.Sockets**.
+
+Main capabilities include:
+
+- TCP Socket Communication
+- Client–Server Architecture
+- Multi-threaded Connection Handling
+- Custom Packet Protocol
+- Server-side Validation
+- Broadcast Synchronization
+- Graceful Client Disconnect
+
+---
+
+# State Synchronization
+
+The server acts as the single source of truth for the game.
+
+Every player action is processed exclusively by the server before being synchronized to all connected clients.
+
+The synchronized game state includes:
+
+- Current turn
+- Active card
+- Active color
+- Player hand sizes
+- Draw pile
+- Discard pile
+- Match status
+- Winner information
+
+This approach guarantees consistency across all connected clients and prevents unauthorized or invalid actions.
+
+---
+
+# Technology Stack
+
+| Category | Technology |
+|-----------|------------|
+| Language | C# |
+| Framework | .NET Framework |
+| GUI | Windows Forms |
+| Networking | TCP/IP (System.Net.Sockets) |
+| Concurrency | Multi-threading |
+| IDE | Visual Studio 2022 |
+| Version Control | Git & GitHub |
+
+---
+
+# Technical Highlights
+
+Multi-threaded TCP Socket Server
+Real-time Multiplayer Communication
+Custom Client–Server Protocol
+Server-authoritative Game Logic
+Thread-safe Windows Forms Updates
+Dynamic Lobby Management
+Automatic State Synchronization
+Complete UNO Rule Enforcement
+
+---
+
+## 👨‍💻 Project Team
+
+* **Hong Bich Nhu** - UNO Game Logic, Windows Forms UI, Gameplay Flow, Client–Server Architecture
+* **Nguyen Thi Huynh Nhu** - Client–Server Architecture, TCP Socket Communication, Network Protocol
