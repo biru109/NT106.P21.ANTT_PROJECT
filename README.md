@@ -62,7 +62,7 @@ The project adopts a **multi-threaded Client–Server Architecture**, enabling *
 
 ---
 
-# 🎯 Gameplay Flow
+# Gameplay Flow
 
 ```text
 Client Connect
