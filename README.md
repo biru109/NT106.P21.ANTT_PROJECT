@@ -1,4 +1,4 @@
-# 🎮 UNO LAN MULTIPLAYER 🎮
+<h1 align="center">🎮 UNO LAN MULTIPLAYER 🎮</h1>
 ### Real-Time Client–Server Card Game using TCP/IP Sockets
 
 Course Project for **NT106 - Application Programming over Networks (UIT)** focusing on building a real-time multiplayer UNO card game over LAN using C# TCP/IP Sockets.
