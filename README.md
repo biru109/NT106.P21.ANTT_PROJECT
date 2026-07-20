@@ -1,11 +1,14 @@
 <h1 align="center">🎮 UNO LAN MULTIPLAYER 🎮</h1>
-### Real-Time Client–Server Card Game using TCP/IP Sockets
 
-Course Project for **NT106 - Application Programming over Networks (UIT)** focusing on building a real-time multiplayer UNO card game over LAN using C# TCP/IP Sockets.
+<p align="center">
+  <b>Real-Time Client–Server Card Game using TCP/IP Sockets</b>
+</p>
 
-A desktop multiplayer implementation of the classic **UNO Card Game** built with **C#**, **Windows Forms**, and **TCP/IP Socket Programming**.
+Course project for **NT106 – Application Programming over Networks** at the **University of Information Technology (UIT)**.
 
-The project adopts a **multi-threaded Client–Server Architecture**, enabling **2–4 players** to compete over a Local Area Network (LAN) while ensuring **real-time communication**, **server-authoritative game synchronization**, and **strict rule validation**.
+A desktop multiplayer implementation of the classic **UNO card game** built with **C#**, **Windows Forms**, and **TCP/IP socket programming**.
+
+The project adopts a **multi-threaded client–server architecture**, enabling **2–4 players** to compete over a Local Area Network (LAN) while ensuring **real-time communication**, **server-authoritative game synchronization**, and **strict rule validation**.
 
 ---
 
