@@ -184,14 +184,14 @@ This approach guarantees consistency across all connected clients and prevents u
 
 # Technical Highlights
 
-Multi-threaded TCP Socket Server
-Real-time Multiplayer Communication
-Custom Client–Server Protocol
-Server-authoritative Game Logic
-Thread-safe Windows Forms Updates
-Dynamic Lobby Management
-Automatic State Synchronization
-Complete UNO Rule Enforcement
+- Multi-threaded TCP Socket Server
+- Real-time Multiplayer Communication
+- Custom Client–Server Protocol
+- Server-authoritative Game Logic
+- Thread-safe Windows Forms Updates
+- Dynamic Lobby Management
+- Automatic State Synchronization
+- Complete UNO Rule Enforcement
 
 ---
 
